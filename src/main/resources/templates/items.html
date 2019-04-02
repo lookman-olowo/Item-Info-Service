@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+    <title>Gregg Tech | Equipment View</title>
+    <link th:href="@{/css/site.css}" rel="stylesheet"/>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Item Number</th>
+        <th>Description</th>
+        <th>Value</th>
+    </tr>
+    <tr th:each="item:${items}">
+        <td th:text="${item.number}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.info}"></td>
+    </tr>
+</table>
+</body>
+</html>
